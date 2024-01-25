@@ -4,9 +4,9 @@ import Todo from './Todo.jsx';
 const TodoList = ({todos, onDeleteTodo, onIsDoneToggle, title}) => {
 
   return (
-    <div>
+    <div className='contents'>
         <h1>{title}</h1>
-        <div>
+        <div className='content'>
             {todos.map(todo => (
                 <Todo 
                     key={todo.id}

@@ -26,12 +26,12 @@ function App() {
   };
 
   return (
-    <div className="body">
-      <div>
+    <div className='body'>
+      <div className='main-title'>
         <span>My Todo List</span>
         <span>React_4기</span>
       </div>
-      <InputArea onAddTodo={handleAddTodo} />
+      <InputArea onTodo={handleAddTodo} />
       <div>
         <TodoList
           todos={todos.filter((todo) => !todo.isDone)}
@@ -40,7 +40,7 @@ function App() {
           title="Working🔥"
         />
         <TodoList
-          todos={todos.filter((todo) => !todo.isDone)}
+          todos={todos.filter((todo) => todo.isDone)}
           onDeleteTodo={handleDeleteTodo}
           onIsDoneToggle={toggleTodoStatus}
           title="Done✔️"

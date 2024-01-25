@@ -15,6 +15,7 @@ const InputArea = ({ onTodo }) => {
   };
 
   const handleAddTodoClick = (e) => {
+    e.preventDefault();
     const { title, content } = inputs;
     if (!title.trim() || !content.trim()) {
       alert('제목과 내용을 모두 입력해주세요.');
@@ -25,10 +26,10 @@ const InputArea = ({ onTodo }) => {
   };
 
   return (
-    <form>
-      <label>제목 : </label>
+    <form className='input-style'>
+      <label>제목 </label>
       <input name='title' value={inputs.title} onChange={handleInput}></input>
-      <label>내용 : </label>
+      <label>내용 </label>
       <input name='content' value={inputs.content} onChange={handleInput}></input>
       <button onClick={handleAddTodoClick}>추가하기</button>
     </form>

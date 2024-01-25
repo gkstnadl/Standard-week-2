@@ -15,10 +15,10 @@ const Todo = ({todo, onDeleteTodo, onIsDoneToggle}) => {
   };
 
   return (
-        <div>
+        <div className='content-item'>
           <h2>{todo.title}</h2>
           <p>{todo.content}</p>
-          <div>
+          <div className='buttons'>
             <button onClick={handleDelete}>삭제하기</button>
             <button onClick={handleIsDoneToggle}>{todo.isDone ? '취소' : '완료'}</button>
           </div>
