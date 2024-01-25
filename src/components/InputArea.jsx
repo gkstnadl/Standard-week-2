@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const TodoInput = ({ onTodo }) => {
+const InputArea = ({ onTodo }) => {
   const [inputs, setInputs] = useState({
     title: '',
     content: ''
@@ -34,3 +34,5 @@ const TodoInput = ({ onTodo }) => {
     </form>
   );
 };
+
+export default InputArea;
